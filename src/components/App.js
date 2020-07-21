@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Home from "./home/Home";
 
 class App extends Component {
   constructor() {
@@ -23,12 +28,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>hello</div>
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} />
+        </Switch>
+      </Router>
     );
   }
 }
 
 export default App;
-
-const wrapper = document.getElementById("container");
-wrapper ? ReactDOM.render(<App />, wrapper) : false;
