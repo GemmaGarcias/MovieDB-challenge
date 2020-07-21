@@ -13,17 +13,6 @@ class App extends Component {
     this.state = {
       value: ""
     };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    const { value } = event.target;
-    this.setState(() => {
-      return {
-        value
-      };
-    });
   }
 
   render() {
