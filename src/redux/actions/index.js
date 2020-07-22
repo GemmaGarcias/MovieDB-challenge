@@ -1,2 +1,2 @@
 export * from './getGenresList';
-export * from './getMoviesByGenre';
+export * from './getMoviesData';

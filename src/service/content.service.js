@@ -16,3 +16,10 @@ export const getMoviesByGenreRequest = async (id) => {
     }
 };
 
+export const getMovieDetailRequest = async (id) => {
+    try {
+        return await api.get(`movie/${id}?api_key=c8ea50452858c6d36f5b07ba3a82823d&language=en-US`);
+    } catch (error) {
+        return error;
+    }
+};

@@ -2,3 +2,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.card-wrapper a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
