@@ -18,17 +18,19 @@ class Movies extends Component {
 
   render() {
     const { results } = this.props.movies;
-    console.log(results)
+
     return (
       <div className="menu">
         <h1 className="title">Movies</h1>
-        {results.map((movie, index) => ( 
-          <Card 
-            key={index}
-            image={movie.poster_path} 
-            title={movie.title} 
-            text={movie.overview}/>
-        ))}
+        <div className="card-wrapper">
+          {results.map((movie, index) => ( 
+            <Card 
+              key={index}
+              image={movie.poster_path} 
+              title={movie.title} 
+              text={movie.overview}/>
+          ))}
+        </div>
       </div>
     );
   }
