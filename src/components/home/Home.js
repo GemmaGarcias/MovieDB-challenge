@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCategories } from '../../redux/actions';
+import { getGenresList } from '../../redux/actions';
 import {
   Link
 } from "react-router-dom";
@@ -14,11 +14,11 @@ class Home extends Component {
   }
 
   componentDidMount(){
-    this.props.getCategories();
+    this.props.getGenresList();
   }
 
   render() {
-    const { results } = this.props.categories;
+    const { results } = this.props.genres;
     return (
       <div className="menu">
         <h1 className="title">Home</h1>
@@ -38,4 +38,4 @@ const mapStateToProps = (state) => {
 	return state
 };
 
-export default connect(mapStateToProps, { getCategories })(Home);
+export default connect(mapStateToProps, { getGenresList })(Home);

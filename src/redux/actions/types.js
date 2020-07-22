@@ -1,1 +1,1 @@
-export const GET_CATEGORIES = 'GET_CATEGORIES';
+export const GET_GENRES_LIST = 'GET_GENRES_LIST';
