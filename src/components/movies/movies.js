@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import { getMoviesByGenre } from '../../redux/actions';
 class Movies extends Component {
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
-      value: ""
+      genreId: props.match.params.id
     };
   }
 
   componentDidMount(){
-    //this.props.getCategories();
+    this.props.getMoviesByGenre(this.state.genreId);
   }
 
   render() {
+    const { results } = this.props.movies;
+    console.log(results)
     return (
       <div className="menu">
         <h1 className="title">Movies</h1>
+        {results.map((movie, index) => ( <p>{movie.title}</p>))}
       </div>
     );
   }
 }
 
-export default Movies;
+const mapStateToProps = (state) => {
+	return state
+};
+
+export default connect(mapStateToProps, { getMoviesByGenre })(Movies);
