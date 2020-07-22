@@ -9,7 +9,7 @@ const INIT_STATE = {
 function reducer (state = {...INIT_STATE}, { type, payload }) {
     switch (type) {
         case GET_CATEGORIES:
-            return { ...state, results: [payload]}
+            return { ...state, results: payload }
         default:
             return state;
     }
