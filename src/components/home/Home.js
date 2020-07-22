@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getCategories } from '../../redux/actions'
 class Home extends Component {
   constructor() {
     super();
@@ -9,6 +10,9 @@ class Home extends Component {
     };
   }
 
+  componentDidMount(){
+    this.props.getCategories('text');
+  }
 
   render() {
     return (
@@ -17,4 +21,9 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  console.log(state)
+	return state
+};
+
+export default connect(mapStateToProps, { getCategories })(Home);
