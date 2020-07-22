@@ -13,17 +13,17 @@ div .menu {
         padding: 0;
     }
     
-    .menu ul li {
+    .menu ul .items {
         float: left;
         background: rgb(235, 178, 178);
         width: 150px;
-        height: 50px;
+        height: 51px;
         border: solid 1px black;
         margin: 10px 10px 0 0;
         border-radius: 0.5em;
     }
     
-    .menu ul li a {
+    .menu ul .items .link {
         color: black;
         text-decoration: none;
         font: normal 13px arial;
@@ -32,7 +32,7 @@ div .menu {
         text-align: center;
     }
     
-    .menu ul li a:hover {
+    .menu ul .items .link:hover {
         color: black;
         background: #b32020;
         border-radius: 0.5em;
