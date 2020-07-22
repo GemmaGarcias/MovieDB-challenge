@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getMoviesByGenre } from '../../redux/actions';
+import { getMoviesByGenre } from '../../../redux/actions';
+import Card from '../../common/card/Card';
+
 class Movies extends Component {
   constructor(props) {
     super();
@@ -20,7 +22,13 @@ class Movies extends Component {
     return (
       <div className="menu">
         <h1 className="title">Movies</h1>
-        {results.map((movie, index) => ( <p>{movie.title}</p>))}
+        {results.map((movie, index) => ( 
+          <Card 
+            key={index}
+            image={movie.poster_path} 
+            title={movie.title} 
+            text={movie.overview}/>
+        ))}
       </div>
     );
   }

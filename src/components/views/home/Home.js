@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getGenresList } from '../../redux/actions';
+import { getGenresList } from '../../../redux/actions';
 import {
   Link
 } from "react-router-dom";
+
 class Home extends Component {
   constructor() {
     super();

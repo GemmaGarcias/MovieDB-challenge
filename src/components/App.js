@@ -7,8 +7,8 @@ import {
 //const Home = React.lazy(() => import('./home/Home'));
 //const Movies = React.lazy(() => import('./movies/Movies'));
 
-import Home from './home/Home';
-import Movies from './movies/Movies';
+import Home from './views/home/Home';
+import Movies from './views/movies/Movies';
 import './App.css';
 
 class App extends Component {

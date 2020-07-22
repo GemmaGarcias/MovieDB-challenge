@@ -1,1 +1,6 @@
-@import "./home/Home.css";
+@import "./views/home/Home.css";
+@import "./common/card/Card.css";
+
+body {
+    font: normal 13px arial;
+}
