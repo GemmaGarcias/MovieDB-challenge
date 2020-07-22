@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import categories from './reducers/categories';
+import genres from './reducers/genres';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
-    categories
+    genres
 });
 
 const store = createStore(reducer, applyMiddleware(thunk));

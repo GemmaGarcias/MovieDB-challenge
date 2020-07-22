@@ -1,5 +1,5 @@
 import {
-    GET_CATEGORIES
+    GET_GENRES_LIST
 } from '../actions/types';
 
 const INIT_STATE = {
@@ -8,7 +8,7 @@ const INIT_STATE = {
 
 function reducer (state = {...INIT_STATE}, { type, payload }) {
     switch (type) {
-        case GET_CATEGORIES:
+        case GET_GENRES_LIST:
             return { ...state, results: payload }
         default:
             return state;
