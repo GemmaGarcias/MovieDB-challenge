@@ -4,7 +4,11 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-const Home = React.lazy(() => import('./home/Home'));
+//const Home = React.lazy(() => import('./home/Home'));
+//const Movies = React.lazy(() => import('./movies/Movies'));
+
+import Home from './home/Home';
+import Movies from './movies/Movies';
 import './App.css';
 
 class App extends Component {
@@ -18,15 +22,12 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Suspense fallback={<div>Loading...</div>}>
           <Router>
             <Switch>
-              <Route exact path="/" render={() => <Home/>}/>
+              <Route exact path="/" component={Home}/>
+              <Route path="/genre/:id" component={Movies}/>
             </Switch>
           </Router>
-        </Suspense>
-      </React.Fragment>
     );
   }
 }

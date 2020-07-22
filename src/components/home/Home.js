@@ -23,9 +23,9 @@ class Home extends Component {
       <div className="menu">
         <h1 className="title">Home</h1>
         <ul>
-          { results.map((category, index) => (
+          { results.map((genre, index) => (
             <li className="items" key={index}>
-              <Link className="link" to={`/category/${category.id}`}>{category.name}</Link>
+              <Link className="link" to={`/genre/${genre.id}`}>{genre.name}</Link>
             </li>
           )) }
         </ul>
