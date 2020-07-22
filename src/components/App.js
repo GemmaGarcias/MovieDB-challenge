@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import Home from "./home/Home";
+const Home = React.lazy(() => import('./home/Home'));
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -17,11 +18,15 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route path="/" component={Home} />
-        </Switch>
-      </Router>
+      <React.Fragment>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Router>
+            <Switch>
+              <Route exact path="/" render={() => <Home/>}/>
+            </Switch>
+          </Router>
+        </Suspense>
+      </React.Fragment>
     );
   }
 }

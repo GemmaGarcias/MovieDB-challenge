@@ -19,7 +19,11 @@ module.exports = {
             loader: "html-loader"
           }
         ]
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
   plugins: [

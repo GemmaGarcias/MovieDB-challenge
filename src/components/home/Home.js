@@ -20,12 +20,12 @@ class Home extends Component {
   render() {
     const { results } = this.props.categories;
     return (
-      <div>
-        <h1></h1>Home
+      <div className="menu">
+        <h1 className="title">Home</h1>
         <ul>
           { results.map((category, index) => (
-            <li key={index}>
-              <Link to={`/category/${category.id}`}>{category.name}</Link>
+            <li className="items" key={index}>
+              <Link className="link" to={`/category/${category.id}`}>{category.name}</Link>
             </li>
           )) }
         </ul>
