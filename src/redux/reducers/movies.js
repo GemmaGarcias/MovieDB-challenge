@@ -4,7 +4,8 @@ import {
  } from "../actions/types";
 
 const INIT_STATE = {
-    results: []
+    results: [],
+    detailResults: {}
 };
 
 function reducer (state = {...INIT_STATE}, { type, payload }) {
@@ -12,7 +13,7 @@ function reducer (state = {...INIT_STATE}, { type, payload }) {
         case GET_MOVIES_BY_GENRE:
             return { ...state, results: payload }
         case GET_MOVIE_DETAIL:
-            return { ...state, results: payload }
+            return { ...state, detailResults: payload }
         default:
             return state;
     }

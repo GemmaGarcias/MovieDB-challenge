@@ -1,6 +1,7 @@
 @import "./views/home/Home.css";
-@import "./common/card/Card.css";
 @import "./views/movies/Movies.css";
+@import "./views/movieDetail/MovieDetail.css";
+@import "./common/card/Card.css";
 
 body {
     font: normal 13px arial;
