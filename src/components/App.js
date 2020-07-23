@@ -4,12 +4,10 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-//const Home = React.lazy(() => import('./home/Home'));
-//const Movies = React.lazy(() => import('./movies/Movies'));
+const Home = React.lazy(() => import('./views/home/Home'));
+const Movies = React.lazy(() => import('./views/movies/Movies'));
+const MovieDetail = React.lazy(() => import('./views/movieDetail/MovieDetail'));
 
-import Home from './views/home/Home';
-import Movies from './views/movies/Movies';
-import MovieDetail from './views/movieDetail/MovieDetail';
 import './App.css';
 
 class App extends Component {
@@ -23,6 +21,7 @@ class App extends Component {
 
   render() {
     return (
+        <Suspense fallback={<div>Loading...</div>}>
           <Router>
             <Switch>
               <Route exact path="/" component={Home}/>
@@ -30,6 +29,7 @@ class App extends Component {
               <Route path="/movie-detail/:id" component={MovieDetail}/>
             </Switch>
           </Router>
+        </Suspense>
     );
   }
 }
