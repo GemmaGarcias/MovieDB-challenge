@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Pagination = (props) => {
     const { currentPage, totalPages, handlePages } = props;
+    console.log(totalPages)
     return (
         <div className="pag-wrapper">
             {currentPage > 1 &&
@@ -12,5 +14,11 @@ const Pagination = (props) => {
         </div>
     )
 }
+
+Pagination.propTypes = {
+    currentPage: PropTypes.number.isRequired,
+    totalPages: PropTypes.number || 1, 
+    handlePages: PropTypes.func.isRequired,
+};
 
 export default Pagination;

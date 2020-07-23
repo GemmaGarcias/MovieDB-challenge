@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getMoviesByGenre } from '../../../redux/actions';
 import Card from '../../common/card/Card';
 import Pagination from './pagination/Pagination';
+import PropTypes from 'prop-types';
 import {
   Link
 } from "react-router-dom";
@@ -59,6 +60,10 @@ class Movies extends Component {
     );
   }
 }
+
+Movies.propTypes = {
+  movies: PropTypes.object.isRequired
+};
 
 const mapStateToProps = (state) => {
 	return state

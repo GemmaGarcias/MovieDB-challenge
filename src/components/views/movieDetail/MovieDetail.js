@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '../../common/card/Card';
 import { getMovieDetail } from '../../../redux/actions';
-
+import PropTypes from 'prop-types';
 class MovieDetail extends Component {
   constructor(props) {
     super();
@@ -33,13 +33,16 @@ class MovieDetail extends Component {
                 <p><strong>Language: </strong>{detailResults.original_language}</p>
                 <p><strong>Overview: </strong>{detailResults.overview}</p>
                 <p><strong>Release Date: </strong>{detailResults.release_date}</p>
-                
             </div>
         </div>
       </div>
     );
   }
 }
+
+MovieDetail.propTypes = {
+  movies: PropTypes.object.isRequired
+};
 
 const mapStateToProps = (state) => {
 	return state

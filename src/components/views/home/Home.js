@@ -4,7 +4,7 @@ import { getGenresList } from '../../../redux/actions';
 import {
   Link
 } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 class Home extends Component {
   constructor() {
     super();
@@ -34,6 +34,10 @@ class Home extends Component {
     );
   }
 }
+
+Home.propTypes = {
+  genres: PropTypes.object.isRequired
+};
 
 const mapStateToProps = (state) => {
 	return state
