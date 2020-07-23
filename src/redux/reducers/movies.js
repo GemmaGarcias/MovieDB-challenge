@@ -4,14 +4,14 @@ import {
  } from "../actions/types";
 
 const INIT_STATE = {
-    results: [],
+    data: {},
     detailResults: {}
 };
 
 function reducer (state = {...INIT_STATE}, { type, payload }) {
     switch (type) {
         case GET_MOVIES_BY_GENRE:
-            return { ...state, results: payload }
+            return { ...state, data: payload }
         case GET_MOVIE_DETAIL:
             return { ...state, detailResults: payload }
         default:

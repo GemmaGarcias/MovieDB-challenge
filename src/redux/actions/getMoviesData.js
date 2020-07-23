@@ -4,13 +4,13 @@ import {
 } from './types';
 import { getMoviesByGenreRequest, getMovieDetailRequest } from '../../service/content.service';
 
-export const getMoviesByGenre = id => {
+export const getMoviesByGenre = (id, page) => {
     return async (dispatch) => {
-        const response = await getMoviesByGenreRequest(id);
+        const response = await getMoviesByGenreRequest(id, page);
         
         dispatch({
             type: GET_MOVIES_BY_GENRE,
-            payload: response.data.results
+            payload: response.data
         });
     }
 };

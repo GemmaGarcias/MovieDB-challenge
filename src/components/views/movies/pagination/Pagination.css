@@ -1,0 +1,8 @@
+.pag-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pag-button {
+    margin: 10px;
+}

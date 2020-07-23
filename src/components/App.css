@@ -1,5 +1,6 @@
 @import "./views/home/Home.css";
 @import "./views/movies/Movies.css";
+@import "./views/movies/pagination/Pagination.css";
 @import "./views/movieDetail/MovieDetail.css";
 @import "./common/card/Card.css";
 
